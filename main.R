@@ -13,7 +13,7 @@
 #### SCRIPT PARAMETERS
 
 ## Include wrangling
-wrangle <- FALSE
+wrangle <- TRUE
 # Set to TRUE if the script should download and wrangle data
 # If set to FALSE the script will download an archived finished dataset
 
@@ -26,6 +26,12 @@ comtradeDownloader <- FALSE
 comtradeToken <- "8K+Ux0yKc/xsg/fbofljZijFtTTVVK64UZDHgh+jXGlp5q27ZPNQFpqq8xJG8s8SEHr2Ui0rR06ZwyEcUbGdPCU2O3H3Vtn+i3qLTAXrA8otLpf9Af/MqsuB7oVoH+e9B9qAOi5HqfzfazeqjzGBB7B1AqkeHSckOisESJ7XESM="
 # If above parameter is set to TRUE, input Comtrade API token
 
+## Path to Stata directory
+chooseStataBin()
+
+## Stata version
+options("RStata.StataVersion" = 17)
+
 
 
 #### DEPENDENCIES
@@ -33,6 +39,8 @@ comtradeToken <- "8K+Ux0yKc/xsg/fbofljZijFtTTVVK64UZDHgh+jXGlp5q27ZPNQFpqq8xJG8s
 library(tidyverse)
 library(readxl)
 library(data.table)
+library(RStata)
+library(lubridate)
 
 
 
@@ -87,3 +95,7 @@ if (wrangle == TRUE) {
 }
 
 
+
+#### RUN ANALYSIS
+
+stata("analysis.do", data.in = gravity)

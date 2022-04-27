@@ -14,6 +14,7 @@ gravity[is.na(gravity)] <- 0
 us <- gravity[(gravity$repcode == "USA" & gravity$parcode == "NOR"),]
 nrow(us)
 
+
 ### OECD GDP
 gravity <- left_join(
   gravity, gdp,
@@ -53,10 +54,19 @@ gravity <- left_join(
 gravity <- gravity[!(is.na(gravity$gdp_ann_rep) & gravity$year <= 2020),]
 gravity <- gravity[!(is.na(gravity$gdp_ann_par) & gravity$year <= 2020),]
 
+## Generate date variable
+gravity["date"] <- make_date(gravity$year, gravity$month, 1)
+
 ## Sort values
 gravity <- gravity[
   order(gravity$repcode, gravity$parcode, gravity$flow, gravity$period)
 ,]
 
-us <- gravity[(gravity$repcode == "USA" & gravity$parcode == "NOR"),]
-nrow(us)
+## Select and reorder variables
+gravity <- gravity[,c("date", "year", "month", "flow", "repcode", "reporter",
+                      "parcode", "partner", "value", "si_rep", "si_par",
+                      "gdp_rep", "gdp_ann_rep", "gdp_par", "gdp_ann_par",
+                      "oecd", "contig", "coldepever", "wto_rep", "wto_par",
+                      "rta", "landlocked_rep", "landlocked_par", 
+                      "comlang_ethno", "distw", "gvc_rep", "upstreamness_rep", 
+                      "gvc_par", "upstreamness_par")]

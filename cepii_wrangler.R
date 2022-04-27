@@ -31,6 +31,7 @@ colnames(cepii.dist) <- c("repcode", "parcode", "comlang_ethno", "distw")
 ## Mutate
 cepii.dist["repcode"] <- str_replace_all(cepii.dist$repcode, "ROM", "ROU")
 cepii.dist["parcode"] <- str_replace_all(cepii.dist$parcode, "ROM", "ROU")
+cepii.dist["distw"] <- as.numeric(cepii.dist$distw)
 
 
 ### GRAVITY DATA

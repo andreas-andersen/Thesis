@@ -37,9 +37,13 @@ gvc.bp <- gvc.bp[1:(nrow(gvc.bp)-16),]
 ## Join
 gvc <- left_join(gvc.fp, gvc.bp, by = "repcode")
 
+## Mutate
+gvc["gvc"] <- gvc$gvc_fp + gvc$gvc_bp
+gvc["upstreamness"] <- log(1 + gvc$gvc_fp) - log(1 + gvc$gvc_bp)
+
 ## Select
-gvc <- gvc[, c(1, 4, 7)]
-colnames(gvc) <- c("countrycode", "gvc_fp", "gvc_bp")
+gvc <- gvc[, c(1, 8, 9)]
+colnames(gvc) <- c("countrycode", "gvc", "upstreamness")
 
 
 
