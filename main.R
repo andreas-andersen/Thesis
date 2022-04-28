@@ -51,11 +51,11 @@ options("RStata.StataVersion" = 17)
 
 if (wrangle == TRUE) {
   
-  source("comtrade_downloader.R")  # Comtrade
-  source("si_downloader.R")        # OxCGRT Stringency Index
-  source("gdp_downloader.R")       # OECD GDP
-  source("cepii_downloader.R")     # CEPII Gravity
-  source("gvc_downloader.R")       # TiVA GVC
+  source("scripts/comtrade_downloader.R")  # Comtrade
+  source("scripts/si_downloader.R")        # OxCGRT Stringency Index
+  source("scripts/gdp_downloader.R")       # OECD GDP
+  source("scripts/cepii_downloader.R")     # CEPII Gravity
+  source("scripts/gvc_downloader.R")       # TiVA GVC
   
 }
 
@@ -65,11 +65,11 @@ if (wrangle == TRUE) {
 
 if (wrangle == TRUE) {
   
-  source("comtrade_wrangler.R")    # Comtrade
-  source("si_wrangler.R")          # OxCGRT Stringency Index
-  source("gdp_wrangler.R")         # OECD GDP
-  source("cepii_wrangler.R")       # CEPII Gravity
-  source("gvc_wrangler.R")         # TiVA GVC
+  source("scripts/comtrade_wrangler.R")    # Comtrade
+  source("scripts/si_wrangler.R")          # OxCGRT Stringency Index
+  source("scripts/gdp_wrangler.R")         # OECD GDP
+  source("scripts/cepii_wrangler.R")       # CEPII Gravity
+  source("scripts/gvc_wrangler.R")         # TiVA GVC
   
 }
 
@@ -79,7 +79,7 @@ if (wrangle == TRUE) {
 
 if (wrangle == TRUE) {
   
-  source("combiner.R")
+  source("scripts/combiner.R")
   
 }
 
@@ -89,11 +89,11 @@ if (wrangle == TRUE) {
 
 if (wrangle == TRUE) {
   
-  source("exporter.R")
+  source("scripts/exporter.R")
   
 } else {
   
-  source("gravity_downloader.R")
+  source("scripts/gravity_downloader.R")
   
 }
 
@@ -105,4 +105,4 @@ if (wrangle == TRUE) {
 f <- "output"
 dir.create(f, showWarnings = FALSE, recursive = TRUE)
 
-stata("analysis.do", data.in = gravity)
+stata("scripts/analysis.do", data.in = gravity)

@@ -11,8 +11,6 @@ gravity <- left_join(
   suffix = c("_rep", "_par")
 )
 gravity[is.na(gravity)] <- 0
-us <- gravity[(gravity$repcode == "USA" & gravity$parcode == "NOR"),]
-nrow(us)
 
 
 ### OECD GDP
