@@ -24,7 +24,7 @@ to `FALSE`, the script will download an archived, completed dataset. The file
 was archived at 28 April 2022.
 
 `comtradeDownloader <- TRUE`  
-Will tell the script to run use the `ComtradeDatabaseDownloader` package to
+Will tell the script to use the `ComtradeDatabaseDownloader` package to
 extract the latest available data from Comtrade. If set to `FALSE`, the script
 will download an archived version extracted at 27 April 2022.
 
