@@ -12,18 +12,18 @@
 
 #### DEPENDENCIES
 
-library(tidyverse)
-library(readxl)
 library(data.table)
-library(RStata)
 library(lubridate)
+library(readxl)
+library(RStata)
+library(tidyverse)
 
 
 
 #### SCRIPT PARAMETERS
 
 ## Include wrangling
-wrangle <- FALSE
+wrangle <- TRUE
 # Set to TRUE if the script should download and wrangle data
 # If set to FALSE the script will download an archived finished dataset
 # Archived at 28 April 2022
