@@ -1,4 +1,4 @@
-# Master's Thesis Replication
+# Master's Thesis Replication Code
 
 Run everything through `main.R` and make sure to set the initial parameters
 correctly. The script requires the download and storage of ca. 1.2 GB of data, 
@@ -27,6 +27,12 @@ was archived at 28 April 2022.
 Will tell the script to run use the `ComtradeDatabaseDownloader` package to
 extract the latest available data from Comtrade. If set to `FALSE`, the script
 will download an archived version extracted at 27 April 2022.
+
+__WARNING!__  
+Downloading a fresh dataset from Comtrade will require around 2 hours to 
+complete. The connection might also fail, which requires you to re-run the 
+script. The downloader does have a backup system which means you do not have 
+to start re-downloading everything.
 
 `comtradeToken <- ""`  
 If the above parameter is set to `TRUE`, input a valid Comtrade API token here.
