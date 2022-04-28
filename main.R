@@ -4,35 +4,11 @@
 #                        "PLACEHOLDER TITLE"                                   #
 #                                                                              #
 #   Author: Andreas Makoto Fukuda Andersen                                     #
-#   Date:                                                                      #
+#   Date: 28 April 2022                                                        #
 #                                                                              #
 ################################################################################
 
-# Make sure to review the parameters before executing the script
-
-#### SCRIPT PARAMETERS
-
-## Include wrangling
-wrangle <- TRUE
-# Set to TRUE if the script should download and wrangle data
-# If set to FALSE the script will download an archived finished dataset
-
-## Downloading Comtrade data
-comtradeDownloader <- FALSE
-# Set to TRUE if the script should use the ComtradeDatabaseDownloader
-# If set to FALSE the script will download an archived Comtrade dataset
-
-## Comtrade token
-comtradeToken <- "8K+Ux0yKc/xsg/fbofljZijFtTTVVK64UZDHgh+jXGlp5q27ZPNQFpqq8xJG8s8SEHr2Ui0rR06ZwyEcUbGdPCU2O3H3Vtn+i3qLTAXrA8otLpf9Af/MqsuB7oVoH+e9B9qAOi5HqfzfazeqjzGBB7B1AqkeHSckOisESJ7XESM="
-# If above parameter is set to TRUE, input Comtrade API token
-
-## Path to Stata directory
-chooseStataBin()
-
-## Stata version
-options("RStata.StataVersion" = 17)
-
-
+# Make sure to review all the parameters below before executing the script
 
 #### DEPENDENCIES
 
@@ -41,6 +17,33 @@ library(readxl)
 library(data.table)
 library(RStata)
 library(lubridate)
+
+
+
+#### SCRIPT PARAMETERS
+
+## Include wrangling
+wrangle <- FALSE
+# Set to TRUE if the script should download and wrangle data
+# If set to FALSE the script will download an archived finished dataset
+# Archived at 28 April 2022
+
+## Downloading Comtrade data
+comtradeDownloader <- FALSE
+# Set to TRUE if the script should use the ComtradeDatabaseDownloader
+# If set to FALSE the script will download an archived Comtrade dataset
+# Archived at 27 April 2022
+
+## Comtrade token
+comtradeToken <- ""
+# If comtradeDownloader is set to TRUE, input Comtrade API token
+
+## Path to Stata executable (without the '.exe' suffix)
+options("RStata.StataPath" = "\"C:\\Program Files\\Stata17\\StataSE-64\"")
+# Alternatively, use the chooseStataBin() function to locate executable
+
+## Stata version
+options("RStata.StataVersion" = 17)
 
 
 
@@ -97,5 +100,9 @@ if (wrangle == TRUE) {
 
 
 #### RUN ANALYSIS
+
+## Generate output folder
+f <- "output"
+dir.create(f, showWarnings = FALSE, recursive = TRUE)
 
 stata("analysis.do", data.in = gravity)

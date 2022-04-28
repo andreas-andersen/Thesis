@@ -1,7 +1,7 @@
 #### IMPORT DATA
 
-cepii.geo <- read_excel("data/cepii/cepii_geo.xls")
-cepii.dist <- read_excel("data/cepii/cepii_dist.xls")
+cepii.geo <- read_excel("data/cepii/cepii_geo.xls", na = ".")
+cepii.dist <- read_excel("data/cepii/cepii_dist.xls", na = ".")
 cepii.grav <- fread(
   "data/cepii/cepii_grav.csv", encoding = "UTF-8", showProgress = FALSE,
   data.table = FALSE
