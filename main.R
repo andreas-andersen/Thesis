@@ -4,7 +4,7 @@
 #                        "PLACEHOLDER TITLE"                                   #
 #                                                                              #
 #   Author: Andreas Makoto Fukuda Andersen                                     #
-#   Date: 28 April 2022                                                        #
+#   Date: 29 April 2022                                                        #
 #                                                                              #
 ################################################################################
 
@@ -53,7 +53,7 @@ if (wrangle == TRUE) {
   
   source("scripts/comtrade_downloader.R")  # Comtrade
   source("scripts/si_downloader.R")        # OxCGRT Stringency Index
-  source("scripts/gdp_downloader.R")       # OECD GDP
+  source("scripts/gdp_downloader.R")       # GDP
   source("scripts/cepii_downloader.R")     # CEPII Gravity
   source("scripts/gvc_downloader.R")       # TiVA GVC
   
@@ -67,7 +67,7 @@ if (wrangle == TRUE) {
   
   source("scripts/comtrade_wrangler.R")    # Comtrade
   source("scripts/si_wrangler.R")          # OxCGRT Stringency Index
-  source("scripts/gdp_wrangler.R")         # OECD GDP
+  source("scripts/gdp_wrangler.R")         # GDP
   source("scripts/cepii_wrangler.R")       # CEPII Gravity
   source("scripts/gvc_wrangler.R")         # TiVA GVC
   

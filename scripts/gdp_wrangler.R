@@ -3,7 +3,7 @@
 gdp_g <- read.csv("data/gdp/gdp_g.csv", encoding = "UTF-8")
 gdp_2017 <- read.csv("data/gdp/gdp_2017.csv", encoding = "UTF-8")
 gdp_ann <- read.csv(
-  "data/gdp/gdp_ann.csv", encoding = "UTF-8", na.strings = ".."
+  "data/gdp/gdp_ann.csv", encoding = "UTF-8", skip = 4#
 )
 
 
@@ -93,11 +93,11 @@ colnames(gdp_2017) <- c("countrycode", "gdp_2017")
 
 ### ANNUAL GDP
 ## Select
-gdp_ann <- gdp_ann[, c(2, 5:7)]
-colnames(gdp_ann) <- c("countrycode", "Y_2020", "Y_2019", "Y_2018")
+gdp_ann <- gdp_ann[, c(2, 5:8)]
+colnames(gdp_ann) <- c("countrycode", "Y_2018", "Y_2019", "Y_2020", "Y_2021")
 gdp_ann <- pivot_longer(
   data             = gdp_ann, 
-  cols             = Y_2020:Y_2018, 
+  cols             = Y_2018:Y_2021, 
   names_to         = "year",
   names_prefix     = "Y_",
   names_transform  = list(year = as.integer),

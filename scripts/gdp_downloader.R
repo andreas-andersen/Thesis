@@ -29,21 +29,18 @@ download.file(url, file.path(f, "gdp_2017.csv"))
 
 ## Annual GDP
 
-wbFilename <- "9aa4aa86-0390-4542-9a86-d35408e5c066"
 url <- paste0(
-  "https://databank.worldbank.org/AjaxDownload",
-  "/FileDownloadHandler.ashx?filename=", wbFilename, ".zip",
-  "&filetype=CSV&language=en",
-  "&displayfile=Data_Extract_From_World_Development_Indicators.zip"
+  "http://api.worldbank.org/v2/country/all/indicator/",
+  "NY.GDP.MKTP.CD?source=2&downloadformat=csv&date=2018:2021"
 )
-download.file(url, file.path(f, "temp.zip"))
+download.file(url, file.path(f, "temp.zip"), mode = "wb")
 unzip(
   file.path(f, "temp.zip"), 
-  files = paste0(wbFilename, "_Data.csv"),
+  files = "API_NY.GDP.MKTP.CD_DS2_EN_csv_v2_4040385.csv",
   exdir = f
 )
 invisible(file.rename(
-  file.path(f, paste0(wbFilename, "_Data.csv")), 
+  file.path(f, "API_NY.GDP.MKTP.CD_DS2_EN_csv_v2_4040385.csv"), 
   file.path(f, "gdp_ann.csv")
 ))
 unlink(file.path(f, "temp.zip"))
