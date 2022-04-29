@@ -4,4 +4,4 @@ output/
 .Rhistory
 .RData
 .Ruserdata
-analysis_external.Rproj
+*.Rproj

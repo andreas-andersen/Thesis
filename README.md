@@ -1,10 +1,13 @@
 # Master's Thesis Replication Code
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/andreas-andersen/Thesis?label=last%20version)
+![GitHub release date](https://img.shields.io/github/release-date/andreas-andersen/Thesis)
+
 Run everything through `main.R` and make sure to set the initial parameters
 correctly. The script requires the download and storage of ca. 1.2 GB of data, 
 so choose working directory accordingly.
 
-### Prerequisites:  
+### Prerequisites 
 R packages:  
 - `data.table`
 - `lubridate`
@@ -20,7 +23,7 @@ Stata packages:
 - [`reghdfe`](http://scorreia.com/software/reghdfe/)
 - [`ppmlhdfe`](http://scorreia.com/software/ppmlhdfe/)
 
-### Parameters:
+### Parameters
 
 `wrangle <- TRUE`  
 Will tell the script to run through the downloading and wrangling steps. If set 
@@ -50,3 +53,8 @@ Optionally, you can use the `chooseStataBin()` function. See the
 
 `options("RStata.StataVersion" = 17)`  
 Assign the version number of your Stata installation
+
+## Output
+9 regression output tables, saved in the standard Stata `.smcl` format.
+
+![Screenshot](img/output.png?raw=true "Screenshot")
