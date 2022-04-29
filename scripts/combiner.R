@@ -55,6 +55,9 @@ gravity <- gravity[!(is.na(gravity$gdp_ann_par) & gravity$year <= 2020),]
 ## Generate date variable
 gravity["date"] <- make_date(gravity$year, gravity$month, 1)
 
+## Convert class of 'flow' variable
+gravity["flow"] <- as.character(gravity$flow)
+
 ## Sort values
 gravity <- gravity[
   order(gravity$repcode, gravity$parcode, gravity$flow, gravity$period)

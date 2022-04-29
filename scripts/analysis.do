@@ -5,7 +5,7 @@
 *																			   *
 ********************************************************************************
 
-/*import delimited "G:\My Drive\2.Study\ECON4091 (Master's Thesis)\Comtrade\analysis_external\data\gravity\gravity.csv", clear */
+
 
 *************************
 * 	WRANGLING			*

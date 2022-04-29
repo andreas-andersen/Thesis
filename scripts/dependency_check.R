@@ -20,7 +20,7 @@ if (!("tidyverse" %in% package.names)) {
   stop("Package 'tidyverse' is outdated. Please update to latest version")
 }
 
-message("All dependencies OK")
+message("All 'R' dependencies OK")
 
 
 #### CLEAN UP
