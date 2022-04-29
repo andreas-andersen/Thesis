@@ -1,14 +1,14 @@
 ********************************************************************************
-* MAIN ANALYSIS																   *
-* 																	   		   *
-* Note: Use from within the R script "main.R"								   *
-*																			   *
+* MAIN ANALYSIS                                                                *
+*                                                                              *
+* Note: Use from within the R script "main.R"                                  *
+*                                                                              *
 ********************************************************************************
 
 
 
 *************************
-* 	WRANGLING			*
+*   WRANGLING           *
 *************************
 {
 * Generate logarithm of trade value *
@@ -45,11 +45,11 @@ replace upstreamness_rep_i = 1 if upstreamness_rep > `median_upstreamness'
 
 
 *************************
-* 	ANALYSIS			*
+*   ANALYSIS            *
 *************************
 
 *********************************************************
-* SI (World, OECD) (2020, 2021) 						*
+* SI (World, OECD) (2020, 2021)                         *
 *********************************************************
 eststo clear
 
@@ -180,7 +180,7 @@ esttab using "output\si.smcl", ///
 }
 	
 *********************************************************
-* SI & GVC (OECD) (2020, 2021)							*
+* SI & GVC (OECD) (2020, 2021)                          *
 *********************************************************
 eststo clear
 
@@ -334,7 +334,7 @@ esttab using "output\si_gvc.smcl", ///
 }	
 	
 *********************************************************
-* SI & Upstreamness (OECD) (2020, 2021)					*
+* SI & Upstreamness (OECD) (2020, 2021)                 *
 *********************************************************
 eststo clear
 
@@ -488,7 +488,7 @@ esttab using "output\si_upstreamness.smcl", ///
 }
 	
 *********************************************************
-* ROBUSTNESS SI Cluster (World, OECD) (2020, 2021)		*
+* ROBUSTNESS SI Cluster (World, OECD) (2020, 2021)      *
 *********************************************************
 eststo clear
 
@@ -619,7 +619,7 @@ esttab using "output\si_cluster.smcl", ///
 }
 	
 *********************************************************
-* ROBUSTNESS SI RP,PP-FE (World, OECD) (2020, 2021)		*
+* ROBUSTNESS SI RP,PP-FE (World, OECD) (2020, 2021)     *
 *********************************************************
 eststo clear
 
@@ -782,7 +782,7 @@ esttab using "output\si_rppp_fe.smcl", ///
 }
 	
 *********************************************************
-* ROBUSTNESS SI RPM-FE (World, OECD) (2020, 2021)		*
+* ROBUSTNESS SI RPM-FE (World, OECD) (2020, 2021)       *
 *********************************************************
 eststo clear
 
@@ -914,7 +914,7 @@ esttab using "output\si_rpm_fe.smcl", ///
 }
 	
 *********************************************************
-* ROBUSTNESS SI & Classic Gravity Models (OECD)			*
+* ROBUSTNESS SI & Classic Gravity Models (OECD)         *
 *********************************************************
 eststo clear
 
@@ -1007,7 +1007,7 @@ esttab using "output\si_gravity.smcl", ///
 }	
 
 *********************************************************
-* ROBUSTNESS 2021 Countries (2020, 2021)				*
+* ROBUSTNESS 2021 Countries (2020, 2021)                *
 *********************************************************
 eststo clear
 
@@ -1071,7 +1071,7 @@ esttab using "output\si_2021.smcl", ///
 }
 
 *********************************************************
-* ROBUSTNESS SI PPML (World, OECD) (2020, 2021)			*
+* ROBUSTNESS SI PPML (World, OECD) (2020, 2021)         *
 *********************************************************
 eststo clear
 
