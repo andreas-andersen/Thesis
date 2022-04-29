@@ -12,6 +12,8 @@
 
 #### DEPENDENCIES
 
+source("scripts/dependency_check.R")
+
 library(data.table)
 library(lubridate)
 library(readxl)

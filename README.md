@@ -10,7 +10,7 @@ so choose working directory accordingly.
 - `lubridate`
 - `readxl`
 - `RStata`
-- `tidyverse`
+- `tidyverse (>=1.3.1)`
 - Downloading latest data from the Comtrade database through the parameter 
 `comtradeDownloader <- TRUE` requires the 
 [`ComtradeDatabaseDownloader`](https://github.com/andreas-andersen/ComtradeDatabaseDownloader)
