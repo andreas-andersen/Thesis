@@ -16,7 +16,7 @@ download.file(url, file.path(f, "cepii_geo.xls"), mode = "wb")
 ## Dyadic distance data
 
 url <- "http://www.cepii.fr/distance/dist_cepii.zip"
-download.file(url, file.path(f, "temp.zip"))
+download.file(url, file.path(f, "temp.zip"), mode = "wb")
 unzip(
   file.path(f, "temp.zip"), 
   files = "dist_cepii.xls",
@@ -32,7 +32,7 @@ unlink(file.path(f, "temp.zip"))
 ## Gravity data
 
 url <- "http://www.cepii.fr/DATA_DOWNLOAD/gravity/data/Gravity_csv_V202102.zip"
-download.file(url, file.path(f, "temp.zip"))
+download.file(url, file.path(f, "temp.zip"), mode = "wb")
 unzip(
   file.path(f, "temp.zip"), 
   files = "Gravity_V202102.csv",
