@@ -1,10 +1,11 @@
 ################################################################################
 #                                                                              #
 #                       Replicating script for                                 #
-#                        "PLACEHOLDER TITLE"                                   #
+#      Braking Trade: The Effects of Non-Pharmaceutical Interventions on       #
+#                            Global Trade                                      #
 #                                                                              #
 #   Author: Andreas Makoto Fukuda Andersen                                     #
-#   Date: 29 April 2022                                                        #
+#   Last updated: 29 April 2022                                                #
 #                                                                              #
 ################################################################################
 

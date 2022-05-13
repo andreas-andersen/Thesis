@@ -173,7 +173,7 @@ quietly {
 
 esttab using "output\si.smcl", ///
 	title(Regression, Main SI) ///
-	se mtitles mgroups(2020 2021 World, pattern(0 0 1 0 1 0 1 0)) ///
+	se mtitles mgroups(OECD-48 2020 2021 World, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pair Reporter/Partner Fixed Effects" "per Period Fixed Effects" ///
 	"r2_a R-squared overall") ///
 	star(* 0.05 ** 0.01 *** 0.001) obslast noomitted replace
@@ -327,7 +327,7 @@ quietly {
 
 esttab using "output\si_gvc.smcl", /// 
 	title(Regression, SI and GVC participation) ///
-	se mtitles mgroups(2020 2021 Continuous, pattern(0 0 1 0 1 0 1 0)) ///
+	se mtitles mgroups(OECD-48 2020 2021 Continuous, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pair Reporter/Partner Fixed Effects" "per Period Fixed Effects" ///
 	"r2_a R-squared overall") ///
 	star(* 0.05 ** 0.01 *** 0.001) obslast varwidth(30) noomitted replace
@@ -481,7 +481,7 @@ quietly {
 
 esttab using "output\si_upstreamness.smcl", /// 
 	title(Regression, SI and Upstreamness World) ///
-	se mtitles mgroups(2020 2021 Continuous, pattern(0 0 1 0 1 0 1 0)) ///
+	se mtitles mgroups(OECD-48 2020 2021 Continuous, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pair Reporter/Partner Fixed Effects" "per Period Fixed Effects" ///
 	"r2_a R-squared overall") ///
 	star(* 0.05 ** 0.01 *** 0.001) obslast varwidth(30) noomitted replace
@@ -612,7 +612,7 @@ quietly {
 
 esttab using "output\si_cluster.smcl", ///
 	title(Regression, Main SI, CLUSTER ROBUST) ///
-	se mtitles mgroups(2020 2021 World, pattern(0 0 1 0 1 0 1 0)) ///
+	se mtitles mgroups(OECD-48 2020 2021 World, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pair Reporter/Partner Fixed Effects" "per Period Fixed Effects" ///
 	"r2_a R-squared overall") ///
 	star(* 0.05 ** 0.01 *** 0.001) obslast noomitted replace
@@ -773,7 +773,7 @@ quietly {
 
 esttab using "output\si_rppp_fe.smcl", ///
 	title(Regression, Main SI, Reporter-Partner-Period FE) ///
-	se mtitles mgroups(2020 2021 World, pattern(0 0 1 0 1 0 1 0)) ///
+	se mtitles mgroups(OECD-48 2020 2021 World, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pair Reporter/Partner Fixed Effects" ///
 	"repper Reporter-Period Fixed Effects" ///
 	"parper Partner-Period Fixed Effects" "per Period Fixed Effects" ///
@@ -906,7 +906,7 @@ quietly {
 
 esttab using "output\si_rpm_fe.smcl", ///
 	title(Regression, Main SI, CLUSTER ROBUST) ///
-	se mtitles mgroups(2020 2021 World, pattern(0 0 1 0 1 0 1 0)) ///
+	se mtitles mgroups(OECD-48 2020 2021 World, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pairm Reporter-Partner-Month-pairs Fixed Effects" ///
 	"per Period Fixed Effects" ///
 	"r2_a R-squared overall") ///
@@ -1097,7 +1097,7 @@ quietly {
 	ppmlhdfe value ///
 		si_rep si_par loggdp_rep loggdp_par, ///
 		vce(robust) absorb(date repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pair "Yes"
 	estadd local per "Yes"
 	
@@ -1127,7 +1127,7 @@ quietly {
 	ppmlhdfe value ///
 		si_rep si_par loggdp_rep loggdp_par, ///
 		vce(robust) absorb(date repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pair "Yes"
 	estadd local per "Yes"
 	
@@ -1157,7 +1157,7 @@ quietly {
 	ppmlhdfe value ///
 		si_rep si_par loggdp_rep loggdp_par, ///
 		vce(robust) absorb(date repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pair "Yes"
 	estadd local per "Yes"
 	
@@ -1185,7 +1185,7 @@ quietly {
 	ppmlhdfe value ///
 		si_rep si_par loggdp_ann_rep loggdp_ann_par, ///
 		vce(robust) absorb(date repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pair "Yes"
 	estadd local per "Yes"
 	
@@ -1194,7 +1194,7 @@ quietly {
 
 esttab using "output\si_ppml.smcl", ///
 	title(Regression, Main SI, PPML) ///
-	se mtitles mgroups(2020 2021 World, pattern(0 0 1 0 1 0 1 0)) ///
+	se mtitles mgroups(OECD-48 2020 2021 World, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pair Reporter/Partner Fixed Effects" "per Period Fixed Effects" ///
 	"r2_p Pseudo-R-squared") ///
 	star(* 0.05 ** 0.01 *** 0.001) obslast noomitted replace
