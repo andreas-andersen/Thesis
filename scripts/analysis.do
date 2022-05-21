@@ -808,7 +808,7 @@ quietly {
 	reghdfe logvalue ///
 		si_rep si_par loggdp_rep loggdp_par, ///
 		vce(robust) absorb(date month#repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pairm "Yes"
 	estadd local per "Yes"
 	
@@ -838,7 +838,7 @@ quietly {
 	reghdfe logvalue ///
 		si_rep si_par loggdp_rep loggdp_par, ///
 		vce(robust) absorb(date month#repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pairm "Yes"
 	estadd local per "Yes"
 	
@@ -868,7 +868,7 @@ quietly {
 	reghdfe logvalue ///
 		si_rep si_par loggdp_rep loggdp_par, ///
 		vce(robust) absorb(date month#repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pairm "Yes"
 	estadd local per "Yes"
 	
@@ -896,7 +896,7 @@ quietly {
 	reghdfe logvalue ///
 		si_rep si_par loggdp_ann_rep loggdp_ann_par, ///
 		vce(robust) absorb(date month#repcode_i#parcode_i)
-	eststo, title(Imports)
+	eststo, title(Exports)
 	estadd local pairm "Yes"
 	estadd local per "Yes"
 	
@@ -905,7 +905,7 @@ quietly {
 
 
 esttab using "output\si_rpm_fe.smcl", ///
-	title(Regression, Main SI, CLUSTER ROBUST) ///
+	title(Regression, Main SI, Reporter-Partner-Month-pairs FE) ///
 	se mtitles mgroups(OECD-48 2020 2021 World, pattern(1 0 1 0 1 0 1 0)) ///
 	scalars("pairm Reporter-Partner-Month-pairs Fixed Effects" ///
 	"per Period Fixed Effects" ///
